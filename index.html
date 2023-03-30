@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selector Topic</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    th {
+        border: 2px solid;
+    }
+
+    ol {
+        color: red;
+
+    }
+
+    h1 {
+        color: blue;
+        
+    }
+
+    .mothers {
+        color: green;
+    }
+
+    #anna {
+        background-color: gray;
+    }
+
+    .descendent p {
+        background-color: darkgreen;
+    }
+
+    .child>p {
+        background-color: blue;
+    }
+
+    .general ~p{
+        background-color: yellow;
+    }
+    .adjescent +p{
+        background-color: aqua;
+    }
+    a:link{
+        color:red;
+        text-decoration:underline;
+        font-size: 50px;
+    }
+    a:active{
+        color: green;
+    }
+    a:hover{
+        color: white;
+        background-color: blue;
+    }
+      a:visited{
+        color:black;
+    } 
+     ::selection{
+        color:orange;
+    }
+    p::before{
+        content: "1-";
+    }
+    p::after{
+        content: "-1";
+    } 
+    
+</style>
+
+<body>
+    <h2>Selectors types</h2>
+    <ul>
+        <li>Simple Selectors</li>
+        <ol>
+            <li>Element selector</li>
+            <li>class selector</li>
+            <li>id selector</li>
+        </ol>
+
+        <li>Combinator Selectors</li>
+        <ol>
+            <li>Descendent selector(space)</li>
+            <li>Child selector(>)</li>
+            <li>adjescent sibling selector(+)</li>
+            <li>general sibling selector(~)</li>
+        </ol>
+
+        <li>Pseudo-class Selectors[:]</li>
+        <ol>
+            <li>link</li>
+            <li>Active</li>
+            <li>Visited</li>
+            <li>Hover</li>
+            <li>Fist-child</li>
+            <li>last-child</li>
+            <li>nth-child</li>
+        </ol>
+
+        <li>Pesudo-elements Selectors[::]</li>
+        <ol>
+            <li>After</li>
+            <li>Before</li>
+            <li>Marker</li>
+            <li>First-letter</li>
+            <li>First-line</li>
+            <li>Selection</li>
+        </ol>
+        <li>Attribute Selectors</li>
+    </ul>
+    <table>
+        <th>Simple Selector</th>
+    </table>
+    <!-- simple selectors -->
+    <!-- element selectors -->
+    <h1>Dheena Raja</h1>
+    <!-- class selector -->
+    <h2 class="mothers">Gopika Kavitha</h2>
+    <!-- id Selector -->
+    <h3 class="brothers" id="anna">Bavish Dheena</h3>
+    <!-- refer above for universal selector -->
+
+    <table> 
+        <th>Combinator Selector</th>
+    </table>
+    <!-- Combinator Selector -->
+    <!-- Descendent Selector -->
+    <div class="descendent">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section>
+    </div>
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+    <br>
+
+    <!-- child Selector -->
+    <div class="child">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div.</p>
+        </section>
+    </div>
+    <p>Paragraph 4. Not in a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+    <br>
+
+    <!-- General Sibling Selector -->
+    <section>
+    <div class="general">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+      </div>
+      
+      <p>Paragraph 3. After a div.</p>
+      <p>Paragraph 4. After a div.</p>
+    </section>
+    <br>
+
+    <!-- adjescent Sibling Selector -->
+    <div class="adjescent">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+      </div>
+      
+      <p>Paragraph 3. After a div.</p>
+      <p>Paragraph 4. After a div.</p>
+    <br>
+    <table>
+        <th>Pseudo-class Selector</th>
+    </table>
+    <a href="https://www.youtube.com/">click this link</a>
+    <br>
+    <a href="mailto:dheenaofficialmusic@gmail.com">click this link</a>
+</body>
+</html>
